@@ -1,0 +1,211 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000065 /* SixthFormTutorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000C9 /* SixthFormTutorApp.swift */; };
+		000000000000000000000066 /* StudyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CA /* StudyModels.swift */; };
+		000000000000000000000067 /* StudyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CB /* StudyStore.swift */; };
+		000000000000000000000068 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CC /* ContentView.swift */; };
+		000000000000000000000069 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CD /* DashboardView.swift */; };
+		00000000000000000000006A /* SubjectViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CE /* SubjectViews.swift */; };
+		00000000000000000000006B /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CF /* TasksView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0000000000000000000000C9 /* SixthFormTutorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthFormTutorApp.swift; sourceTree = "<group>"; };
+		0000000000000000000000CA /* StudyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyModels.swift; sourceTree = "<group>"; };
+		0000000000000000000000CB /* StudyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyStore.swift; sourceTree = "<group>"; };
+		0000000000000000000000CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0000000000000000000000CD /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		0000000000000000000000CE /* SubjectViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViews.swift; sourceTree = "<group>"; };
+		0000000000000000000000CF /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		0000000000000000000000D0 /* SixthFormTutor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SixthFormTutor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000000000000000192 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00000000000000000000012D = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000012E /* SixthFormTutor */,
+				00000000000000000000012F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00000000000000000000012E /* SixthFormTutor */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000C9 /* SixthFormTutorApp.swift */,
+				0000000000000000000000CA /* StudyModels.swift */,
+				0000000000000000000000CB /* StudyStore.swift */,
+				0000000000000000000000CC /* ContentView.swift */,
+				0000000000000000000000CD /* DashboardView.swift */,
+				0000000000000000000000CE /* SubjectViews.swift */,
+				0000000000000000000000CF /* TasksView.swift */
+			);
+			path = SixthFormTutor;
+			sourceTree = "<group>";
+		};
+		00000000000000000000012F /* Products */ = {
+			isa = PBXGroup;
+			children = (0000000000000000000000D0 /* SixthFormTutor.app */);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0000000000000000000001F5 /* SixthFormTutor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000322 /* Build configuration list for PBXNativeTarget "SixthFormTutor" */;
+			buildPhases = (
+				000000000000000000000191 /* Sources */,
+				000000000000000000000192 /* Frameworks */,
+				000000000000000000000193 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = SixthFormTutor;
+			productName = SixthFormTutor;
+			productReference = 0000000000000000000000D0 /* SixthFormTutor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000259 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					0000000000000000000001F5 = { CreatedOnToolsVersion = 15.0; };
+				};
+			};
+			buildConfigurationList = 000000000000000000000321 /* Build configuration list for PBXProject "SixthFormTutor" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = 00000000000000000000012D;
+			productRefGroup = 00000000000000000000012F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (0000000000000000000001F5 /* SixthFormTutor */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000000193 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000000191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000065 /* SixthFormTutorApp.swift in Sources */,
+				000000000000000000000066 /* StudyModels.swift in Sources */,
+				000000000000000000000067 /* StudyStore.swift in Sources */,
+				000000000000000000000068 /* ContentView.swift in Sources */,
+				000000000000000000000069 /* DashboardView.swift in Sources */,
+				00000000000000000000006A /* SubjectViews.swift in Sources */,
+				00000000000000000000006B /* TasksView.swift in Sources */
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0000000000000000000002BD /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			}; name = Debug; };
+		0000000000000000000002BE /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+			}; name = Release; };
+		0000000000000000000002BF /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sixth Form Tutor";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaf1887.sixthformtutor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+		}; name = Debug; };
+		0000000000000000000002C0 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sixth Form Tutor";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaf1887.sixthformtutor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_COMPILATION_MODE = wholemodule;
+		}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000000321 /* Build configuration list for PBXProject "SixthFormTutor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (0000000000000000000002BD /* Debug */, 0000000000000000000002BE /* Release */);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000322 /* Build configuration list for PBXNativeTarget "SixthFormTutor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (0000000000000000000002BF /* Debug */, 0000000000000000000002C0 /* Release */);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000259 /* Project object */;
+}
