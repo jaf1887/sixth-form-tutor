@@ -1,4 +1,4 @@
-name: Build iOS simulator app
+name: Build iOS apps
 
 on:
   push:
@@ -42,4 +42,32 @@ jobs:
         with:
           name: SixthFormTutor-iOS-Simulator
           path: ${{ runner.temp }}/SixthFormTutor-simulator.zip
+          if-no-files-found: error
+
+      - name: Build unsigned iPhone and iPad app
+        run: |
+          xcodebuild \
+            -project SixthFormTutor.xcodeproj \
+            -scheme SixthFormTutor \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/DerivedDataDevice" \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Package unsigned device IPA
+        run: |
+          APP="$RUNNER_TEMP/DerivedDataDevice/Build/Products/Release-iphoneos/SixthFormTutor.app"
+          test -d "$APP"
+          mkdir -p "$RUNNER_TEMP/Payload"
+          cp -R "$APP" "$RUNNER_TEMP/Payload/"
+          (cd "$RUNNER_TEMP" && zip -qry SixthFormTutor-unsigned.ipa Payload)
+          test -s "$RUNNER_TEMP/SixthFormTutor-unsigned.ipa"
+
+      - name: Upload unsigned device IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: SixthFormTutor-unsigned-iPhone-iPad-IPA
+          path: ${{ runner.temp }}/SixthFormTutor-unsigned.ipa
           if-no-files-found: error
