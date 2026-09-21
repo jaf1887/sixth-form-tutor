@@ -28,11 +28,14 @@ You do **not** need to make a second Xcode project or manually import the Swift 
 
 A free Apple ID can normally be used for personal development builds with limitations; distributing to other people via TestFlight or the App Store requires Apple Developer Program enrolment and a separate release process.
 
-## Build in GitHub Actions (iOS Simulator)
+## Build in GitHub Actions
 
-The [Build iOS simulator app](../../actions/workflows/ios-build.yml) workflow runs on pushes to `main` and can also be started using **Run workflow** on GitHub. After a successful run, download the **SixthFormTutor-iOS-Simulator** artifact. It contains a zipped `SixthFormTutor.app` for the **iOS Simulator only**.
+The [Build iOS apps](../../actions/workflows/ios-build.yml) workflow runs on pushes to `main` and can also be started using **Run workflow** on GitHub. After a successful run, there are two downloadable artifacts:
 
-**That artifact is not a signed iPhone/iPad IPA and cannot be installed directly on a physical device.** Build and sign from Xcode using your own Apple development team to run it on a device.
+- **SixthFormTutor-iOS-Simulator**: a zipped `SixthFormTutor.app` that runs **only in the iOS Simulator**.
+- **SixthFormTutor-unsigned-iPhone-iPad-IPA**: a compiled physical-device IPA that is **not signed**.
+
+**Neither artifact can be installed directly on a physical iPhone or iPad as-is.** The device IPA must first be signed with a valid Apple development/distribution certificate and provisioning profile. For running on your own device, the easiest route is to open the project in Xcode and use your Apple team with automatic signing. Do not upload Apple signing credentials or private keys to this public repository.
 
 ## Project layout
 
@@ -57,4 +60,4 @@ README.md
 
 Study-task completion is stored on the device. No cloud account is used by this starter. Future AI tutoring should use a secure backend: do not commit API keys or embed secret API keys in a public iOS application.
 
-> Build status: The native Xcode project and build automation have been added. A successful compiler build is not guaranteed until Xcode or GitHub Actions reports success.
+> Build status: The first iOS Simulator compilation succeeded on GitHub Actions. Device builds and later changes should be checked in Actions for their own result.
