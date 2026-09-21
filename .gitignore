@@ -1,0 +1,18 @@
+# Xcode local files
+.DS_Store
+*.xcuserstate
+xcuserdata/
+DerivedData/
+.build/
+.swiftpm/
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+Secrets.swift
+*.p12
+*.mobileprovision
