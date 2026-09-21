@@ -1,0 +1,45 @@
+name: Build iOS simulator app
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build Sixth Form Tutor for iOS Simulator
+        run: |
+          xcodebuild \
+            -project SixthFormTutor.xcodeproj \
+            -scheme SixthFormTutor \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/DerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Package simulator app
+        run: |
+          APP="$RUNNER_TEMP/DerivedData/Build/Products/Debug-iphonesimulator/SixthFormTutor.app"
+          test -d "$APP"
+          ditto -c -k --sequesterRsrc --keepParent "$APP" "$RUNNER_TEMP/SixthFormTutor-simulator.zip"
+
+      - name: Upload simulator app
+        uses: actions/upload-artifact@v4
+        with:
+          name: SixthFormTutor-iOS-Simulator
+          path: ${{ runner.temp }}/SixthFormTutor-simulator.zip
+          if-no-files-found: error
